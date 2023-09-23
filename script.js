@@ -1,5 +1,10 @@
 // Assignment code here
-
+var passDeets = {
+  upperCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  lowerCase: 'abcdefghijklmnopqrstuvwxyz',
+  symbols: '!@#$%^&*(){}[]=<>/,.',
+  numbers: '0123456789',
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
