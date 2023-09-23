@@ -7,7 +7,13 @@ var passDeets = {
 };
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector('#generate');
+var lengthEl = document.getElementById('length');
+var uppercaseEl = document.getElementById('uppercase');
+var lowercaseEl = document.getElementById('lowercase');
+var numbersEl = document.getElementById('numbers');
+var symbolsEl = document.getElementById('symbols');
+
 
 // Write password to the #password input
 function writePassword() {
