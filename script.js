@@ -6,6 +6,11 @@ var passDeets = {
   numbers: '0123456789',
 };
 
+function randomizer(passdeetsArray) {
+  const randomIndex = Math.floor(Math.random() * passdeetsArray.length);
+  return passdeetsArray[randomIndex];
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 var lengthEl = document.getElementById('length');
@@ -26,8 +31,26 @@ function generatePassword() {
 
   let generatedPassword = '';
   const typesCount = hasLower + hasUpper + hasNumber + hasSymbol;
-  
+
+  const passdeetsArray = [
+    hasLower && passDeets.lowerCase,
+    hasUpper && passDeets.upperCase,
+    hasNumber && passDeets.numbers,
+    hasSymbol && passDeets.symbols,
+  ].filter(Boolean);
+
+  for (let i = 0; i < length; i += typesCount) {
+    passdeetsArray.forEach((type) => {
+      if (generatedPassword.length < length) {
+        generatedPassword += randomizer(type);
+      }
+    });
+  }
+
+  return generatedPassword;
 }
+
+
 
 function writePassword() {
   var password = generatePassword();
