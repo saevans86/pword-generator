@@ -27,6 +27,8 @@ clone repo, open the HTML as live server, or in default browser, or just click t
 
 
 ## Usage 
+You can visit the page to check functionality at this link https://saevans86.github.io/pword-generator/
+
 You can choose how many characters your password should be, and to include any numbers, symbols, lower/upper case and just click the generate password button.
 
 
